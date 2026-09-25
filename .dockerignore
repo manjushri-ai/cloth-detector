@@ -1,0 +1,6 @@
+# keep the build context small - only app.py, requirements.txt, best.pt are needed
+*
+!app.py
+!requirements.txt
+!best.pt
+!webcam_detect.py

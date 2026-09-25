@@ -1,0 +1,7 @@
+# torch/torchvision (CPU) are installed separately in the Dockerfile to keep the image small.
+# Pin ultralytics to the exact version you trained with (check on Kaggle: pip show ultralytics),
+# e.g. ultralytics==8.4.161
+ultralytics
+fastapi
+uvicorn[standard]
+python-multipart
