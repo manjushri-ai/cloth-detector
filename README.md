@@ -5,6 +5,7 @@
 **Real-time clothing and accessory detection powered by YOLO26n**
 
 Detects 44 clothing and accessory classes from a live webcam feed, served through a FastAPI backend with a browser-based interface.
+
 </div>
 
 ---
@@ -18,7 +19,8 @@ Detects 44 clothing and accessory classes from a live webcam feed, served throug
 - [Getting Started (Docker)](#getting-started-docker)
 - [Using the Web App](#using-the-web-app)
 - [Alternative: Native Python Webcam](#alternative-native-python-webcam)
-- [Detection Classes](#detection-classes)
+- [Supported Garments](#supported-garments)
+- [Model Limitations](#model-limitations)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
 - [License](#license)
@@ -172,7 +174,9 @@ A window will open showing live detections. Press `q` to exit.
 
 ---
 
-## Detection Classes
+## Supported Garments
+
+The model supports 44 clothing and accessory classes.
 
 <details>
 <summary><strong>View all 44 classes</strong></summary>
@@ -203,6 +207,35 @@ A window will open showing live detections. Press `q` to exit.
 | 22 | Coat | 44 | Bag/Handbag |
 
 </details>
+
+---
+
+## Model Limitations
+
+Performance varies across garment categories.
+
+### Classes with no training examples
+
+The following classes had **no training examples** in the current training dataset and are therefore **not expected to detect reliably**:
+
+- Polo Shirt
+- Hoodie
+- Trench Coat
+- Puffer/Parka
+- Bomber/Varsity/Track Jacket
+
+### Factors affecting detection quality
+
+Detection quality may also vary depending on:
+
+- Garment type
+- Lighting conditions
+- Camera angle
+- Garment visibility (partial occlusion, layering)
+- Background clutter
+- Similar-looking clothing categories
+
+> These limitations reflect the current training dataset and are expected to improve with additional labeled data for the affected classes.
 
 ---
 
